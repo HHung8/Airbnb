@@ -19,6 +19,6 @@ const ErrorState: React.FC<ErrorStateProps> = ({
             subtitle="Some thing went wrong!"
         />
     )
-};
+}; 
 
 export default ErrorState;
