@@ -35,13 +35,9 @@ const SearchModal = () => {
     key: "selection",
   });
 
-  const Map = useMemo(
-    () =>
-      dynamic(() => import("../Map"), {
-        ssr: false,
-      }),
-    [location]
-  );
+  const Map = useMemo(() => dynamic(() => import('../Map'), { 
+    ssr: false 
+  }), [location]);
 
   const onBack = useCallback(() => {
     setStep((value) => value - 1);
@@ -82,7 +78,6 @@ const SearchModal = () => {
 
     setStep(STEPS.LOCATION);
     searchModal.onClose();
-
     router.push(url);
   }, [
     step,
